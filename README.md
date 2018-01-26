@@ -4,6 +4,7 @@
 
 ## 更新
 
+* 2018.01.26 -- 0.1.25 增加了ywork.config.js的配置，有json使用json，否则使用ywork.config.js
 * 2018.01.26 -- 0.1.24 增加一下sw(service worker的支持)
 * 2017.12.18 -- 0.1.23 manifest.json里面设置倒序排列, 修复woff2=>woff问题
 * 2017.10.19 -- 0.1.22 修复del模块的依赖问题
