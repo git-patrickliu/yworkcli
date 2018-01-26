@@ -262,6 +262,11 @@ if (argv.publish) {
 			console.log(new Buffer(execSync('cd ' + YWORKFLOW_PATH + '&& gulp rev-views-deps  --hash ' + _useHash + ' --path ' + _progressPath + SHELL_LOG_TASK)).toString());
 		}
 
+		if (!!argv['sw']) {
+			console.log('[生成service worker信息]')
+            console.log(execSync('cd ' + YWORKFLOW_PATH + ' && gulp sw --path ' + _progressPath + SHELL_LOG_TASK).toString());
+		}
+
 		// 若开启了combo,则进行combo处理
 		if (!!(PROJECT_CONFIG.combo.force)) {
 			execSync('cd ' + YWORKFLOW_PATH + '&& gulp preview-combo --useLogic --path ' + _progressPath + SHELL_LOG_TASK);
